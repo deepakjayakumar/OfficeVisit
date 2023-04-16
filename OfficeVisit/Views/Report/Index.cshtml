@@ -1,0 +1,60 @@
+﻿@model OfficeVisit.ViewModels.ReportViewModel
+@using OfficeVisit.Data.Model
+@using Kendo.Mvc.UI
+
+<h1>List of report</h1>
+@foreach(var items in Model.Reports)
+{
+	<div class="container">
+		<span  hidden="hidden">@items.Office_Id</span>
+		<div class="row">
+			<div class="col-md-2">
+				<span>@items.Visited_Date</span>
+			</div>
+			<div class="col-md-2">
+				<span>@items.NSS_Id</span>
+			</div>
+			<div class="col-md-2">
+				<span>@items.SBD_Id</span>			</div>
+			<div class="col-md-2">
+				<span>@items.SOM_Id</span>
+			</div>
+			<div class="col-md-2">
+				<span>@items.Last_Audit_Date</span>			</div>
+			<div class="col-md-2">
+				<span>@items.Office_Score</span>
+			</div>
+
+		</div>
+
+	</div>
+}
+
+<br />
+
+@(Html.Kendo().Grid(Model.Reports)
+	.Name("Grid")
+	.Columns(columns =>
+	{
+		columns.Bound(p => p.Visited_Date).Title("Visited Date");
+		columns.Bound(p => p.NSS_Id).Title("NSS Id");
+		columns.Bound(p => p.SBD_Id).Title("SBD Id");
+		columns.Bound(p => p.SOM_Id).Title("SOM Id");
+		columns.Bound(p => p.Last_Audit_Date).Title("Last Audit Date");
+		columns.Bound(p => p.Office_Score).Title("Office Score");
+		//columns.Bound(p => p.Office_Id).Hidden();
+
+	})
+	.Pageable()
+	.Sortable()
+	.Scrollable(scr => scr.Height(430))
+	.Filterable()
+	.DataSource(dataSource => dataSource
+		.Ajax()
+		.PageSize(20)
+		.ServerOperation(false)
+		)
+)
+
+
+
