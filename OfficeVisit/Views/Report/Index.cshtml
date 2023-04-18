@@ -6,23 +6,23 @@
 @foreach(var items in Model.Reports)
 {
 	<div class="container">
-		<span  hidden="hidden">@items.Office_Id</span>
+		<span  hidden="hidden">@items.OfficeId</span>
 		<div class="row">
 			<div class="col-md-2">
-				<span>@items.Visited_Date</span>
+				<span>@items.VisitedDate</span>
 			</div>
 			<div class="col-md-2">
-				<span>@items.NSS_Id</span>
+				<span>@items.NSSId</span>
 			</div>
 			<div class="col-md-2">
-				<span>@items.SBD_Id</span>			</div>
+				<span>@items.SBDId</span>			</div>
 			<div class="col-md-2">
-				<span>@items.SOM_Id</span>
+				<span>@items.SOMId</span>
 			</div>
 			<div class="col-md-2">
-				<span>@items.Last_Audit_Date</span>			</div>
+				<span>@items.LastAuditDate</span>			</div>
 			<div class="col-md-2">
-				<span>@items.Office_Score</span>
+				<span>@items.OfficeScore</span>
 			</div>
 
 		</div>
@@ -36,12 +36,12 @@
 	.Name("Grid")
 	.Columns(columns =>
 	{
-		columns.Bound(p => p.Visited_Date).Title("Visited Date");
-		columns.Bound(p => p.NSS_Id).Title("NSS Id");
-		columns.Bound(p => p.SBD_Id).Title("SBD Id");
-		columns.Bound(p => p.SOM_Id).Title("SOM Id");
-		columns.Bound(p => p.Last_Audit_Date).Title("Last Audit Date");
-		columns.Bound(p => p.Office_Score).Title("Office Score");
+		columns.Bound(p => p.VisitedDate).Title("Visited Date");
+		columns.Bound(p => p.NSSId).Title("NSS Id");
+		columns.Bound(p => p.SBDId).Title("SBD Id");
+		columns.Bound(p => p.SOMId).Title("SOM Id");
+		columns.Bound(p => p.LastAuditDate).Title("Last Audit Date");
+		columns.Bound(p => p.OfficeScore).Title("Office Score");
 		//columns.Bound(p => p.Office_Id).Hidden();
 
 	})

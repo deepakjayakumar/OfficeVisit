@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="https://kendo.cdn.telerik.com/themes/6.2.0/bootstrap/bootstrap-main.css" />
     .
     <link rel="stylesheet" href="~/OfficeVisit.styles.css" asp-append-version="true" />
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2023.1.314/js/jquery.min.js"></script>
+
+    <script src="https://kendo.cdn.telerik.com/2023.1.314/js/kendo.all.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2023.1.314/js/kendo.aspnetmvc.min.js"></script>
 </head>
 <body>
     <header>
@@ -43,11 +48,7 @@
             &copy; 2023 - OfficeVisit - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
-    <script src="https://kendo.cdn.telerik.com/2023.1.314/js/jquery.min.js"></script>
-
-    <script src="https://kendo.cdn.telerik.com/2023.1.314/js/kendo.all.min.js"></script>
-    <script src="https://kendo.cdn.telerik.com/2023.1.314/js/kendo.aspnetmvc.min.js"></script>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+  
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)

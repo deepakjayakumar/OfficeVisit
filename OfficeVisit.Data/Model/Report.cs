@@ -9,14 +9,14 @@ namespace OfficeVisit.Data.Model
 {
 	public class Report
 	{
-		public string Office_Id { get; set; }
-		public string NSS_Id { get; set; }
-		public string SOM_Id { get; set; }
-		public string SBD_Id { get; set; }
-		public DateTime Visited_Date { get; set; }
+		public string OfficeId { get; set; }
+		public string NSSId { get; set; }
+		public string SOMId { get; set; }
+		public string SBDId { get; set; }
+		public DateTime VisitedDate { get; set; }
 
-		public DateTime Last_Audit_Date { get; set; }
+		public DateTime LastAuditDate { get; set; }
 
-		public int Office_Score {get;set;}
+		public int OfficeScore {get;set;}
 	}
 }
