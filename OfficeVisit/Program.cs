@@ -10,7 +10,7 @@ IConfiguration sqlconfig = configuration.GetSection("OfficeDBConnection");
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddKendo();
-builder.Services.AddScoped<IDatabaseRepository>(x => { return new OfficeDatabaseReporitory(sqlconfig["datasource"], sqlconfig["initialcatalog"], sqlconfig["userid"], sqlconfig["password"], sqlconfig["connectiontimeout"]); });
+builder.Services.AddTransient<IDatabaseRepository>(x => { return new OfficeDatabaseReporitory(sqlconfig["datasource"], sqlconfig["initialcatalog"], sqlconfig["userid"], sqlconfig["password"], sqlconfig["connectiontimeout"]); });
 builder.Services.AddScoped<IReportService, BasicReportService>();
 
 var app = builder.Build();
