@@ -40,7 +40,7 @@ namespace OfficeVisit.Data.Repository
 		public async Task<IList<Report>> GetReports()
 		{
 			SqlConnection sqlConnection = await GetConnection();
-			SqlDataReader sqlDataReader = null;
+			SqlDataReader sqlDataReader;
 			DataTable dt = new DataTable();
 			IList<Report> reportList = new List<Report>();
 			try
@@ -52,7 +52,7 @@ namespace OfficeVisit.Data.Repository
 
 					cmd.ExecuteNonQuery();
 					sqlDataReader = cmd.ExecuteReader();
-					reportList = DataReaderMapToList<Report>(sqlDataReader);
+					 reportList = DataReaderMapToList<Report>(sqlDataReader);
 
 				}
 				await sqlConnection.CloseAsync();
